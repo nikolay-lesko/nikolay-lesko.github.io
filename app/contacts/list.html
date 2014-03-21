@@ -33,13 +33,16 @@
 						<sort-field id="sortByName" for="Name" current="Sort.Field" desc="Sort.Desc">Name</sort-field>
 					</th>
 					<th>
-						<sort-field id="sortBySurname" for="Surname" current="Sort.Field" desc="Sort.Desc">Surname</sort-field>
+						<sort-field id="sortBySurname" for="Surname" current="Sort.Field" desc="Sort.Desc">Surname
+						</sort-field>
 					</th>
 					<th>
-						<sort-field id="sortByPhone" for="Phone" current="Sort.Field" desc="Sort.Desc">Phone</sort-field>
+						<sort-field id="sortByPhone" for="Phone" current="Sort.Field" desc="Sort.Desc">Phone
+						</sort-field>
 					</th>
 					<th>
-						<sort-field id="sortByGroup" for="Group" current="Sort.Field" desc="Sort.Desc">Group</sort-field>
+						<sort-field id="sortByGroup" for="Group" current="Sort.Field" desc="Sort.Desc">Group
+						</sort-field>
 					</th>
 					<th></th>
 				</tr>
@@ -52,7 +55,7 @@
 				<tr ng-repeat-end ng-repeat="c in g.Contacts">
 					<td>{{c.Name}}</td>
 					<td>{{c.Surname}}</td>
-					<td>{{c.Phone}}</td>
+					<td>{{c.Phone|tel}}</td>
 					<td>{{c.Group}}</td>
 					<td>
 						<button class="btn btn-default glyphicon glyphicon-pencil"

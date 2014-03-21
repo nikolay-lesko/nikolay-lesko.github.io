@@ -32,7 +32,10 @@ module.exports = function (config) {
 
 			'../app/js/*.js',
 			'../app/authentication/*.js',
-			'../app/contacts/*.js',
+			'../app/contacts/contacts_module.js',
+			'../app/contacts/contactsService.js',
+			'../app/contacts/contactsListController.js',
+			'../app/contacts/editContactController.js',
 
 			'./unit/**/*.spec.js'
 		],

@@ -86,8 +86,8 @@ describe('Contacts', function () {
 		allContacts.then(function (contacts) {
 			expect(contacts.length).toEqual(2);
 
-			expect(contacts[0].getText()).toEqual('0501111111');
-			expect(contacts[1].getText()).toEqual('0502222222');
+			expect(contacts[0].getText()).toEqual('(050) 111-1111');
+			expect(contacts[1].getText()).toEqual('(050) 222-2222');
 
 			sortField.click();
 			allContacts = element.all(by.repeater('c in g.Contacts').column('c.Phone'));
@@ -95,8 +95,8 @@ describe('Contacts', function () {
 				expect(contacts.length).toEqual(2);
 
 				// check desc sort by Surname
-				expect(contacts[0].getText()).toEqual('0502222222');
-				expect(contacts[1].getText()).toEqual('0501111111');
+				expect(contacts[0].getText()).toEqual('(050) 222-2222');
+				expect(contacts[1].getText()).toEqual('(050) 111-1111');
 			})
 		})
 	})

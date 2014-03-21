@@ -106,7 +106,7 @@ describe('Edit Dialog', function () {
 
 			expect(element(by.model('Contact.Name')).getAttribute('value')).toEqual('Andrey');
 			expect(element(by.model('Contact.Surname')).getAttribute('value')).toEqual('Bunin');
-			expect(element(by.model('Contact.Phone')).getAttribute('value')).toEqual('(050) 222-22-22');
+			expect(element(by.model('Contact.Phone')).getAttribute('value')).toEqual('(050) 222-2222');
 			expect(element(by.model('Contact.Group')).getAttribute('value')).toEqual('Friend');
 		})
 

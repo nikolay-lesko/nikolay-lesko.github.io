@@ -66,7 +66,15 @@ module.factory('ContactsService', ['AuthService', 'LocalStorageService', '$q', '
 
 				var contacts = getContacts();
 
+				var samePhoneContacts = $filter('filter')(contacts, {Phone: contact.Phone});
+				if (samePhoneContacts && samePhoneContacts.length) {
+					if (samePhoneContacts[0].Id != contact.Id)
+						return defer.reject('Already exists contact with the same phone');
+				}
+
 				if (contact.Id == undefined || contact.Id <= 0) {
+
+
 					contact.Id = lastId++;
 					contacts.push(contact);
 				}
