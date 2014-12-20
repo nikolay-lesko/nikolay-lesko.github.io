@@ -1,0 +1,78 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="onCancelClick()">&times;</button>
+	<h4 class="modal-title" id="myModalLabel">{{Title}}</h4>
+</div>
+
+<div class="modal-body">
+
+	<ng-form name="form" novalidate>
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Name</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Name"
+					       name="name"
+					       ng-model="Contact.Name"
+					       required
+					       ng-pattern="/^[a-zA-Z]{3,}$/"
+					       validation-highlight/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Surname</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Surname"
+					       name="surname"
+					       ng-model="Contact.Surname"
+					       ng-pattern="/^[a-zA-Z]{3,30}$/"
+					       validation-highlight/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Phone</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control"
+					       name="phone"
+					       ng-model="Contact.Phone"
+					       required
+					       ui-mask="(999) 999-9999"
+					       validation-highlight/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="server" class="col-sm-2 control-label">Group</label>
+
+				<div class="col-sm-10" id="server">
+					<div class="input-group">
+						<input type="text" class="form-control" ng-model="Contact.Group">
+
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle"
+							        data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li ng-repeat="g in Groups">
+									<a href="" ng-click="onSelectGroup(g)">{{g}}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="label label-danger pull-right" ng-show="ScopeFix.Error">{{ScopeFix.Error}}</div>
+		</div>
+	</ng-form>
+</div>
+<div class="modal-footer">
+	<button type="submit" class="btn btn-primary" ng-click="onSaveClick(form)">Save</button>
+	<button type="button" class="btn btn-default" ng-click="onCancelClick()">Close</button>
+</div>
+
+<progress-indicator ng-show="ScopeFix.IsLoading"></progress-indicator>

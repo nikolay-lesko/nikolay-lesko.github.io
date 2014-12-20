@@ -2,7 +2,7 @@ describe('Contacts Service', function () {
 	var timeout;
 
 	beforeEach(function () {
-		angular.mock.module('ContactsModule');
+		angular.mock.module('Contacts');
 
 		inject(function ($timeout) {
 			timeout = $timeout;
@@ -19,17 +19,17 @@ describe('Contacts Service', function () {
 		});
 	}
 
-	it('should contain ContactsService', inject(function (ContactsService) {
-		expect(ContactsService).toBeDefined();
+	it('should contain Contacts service', inject(function (Contacts) {
+		expect(Contacts).toBeDefined();
 	}))
 
 	describe('list', function () {
 
-		it('should exist', inject(function (ContactsService) {
-			expect(ContactsService.list).toBeDefined();
+		it('should exist', inject(function (Contacts) {
+			expect(Contacts.list).toBeDefined();
 		}))
 
-		it('should validate pager', inject(function (ContactsService) {
+		it('should validate pager', inject(function (Contacts) {
 			var pagers = [
 				{index: -1, size: undefined, valid: false },
 				{index: -1, size: 0, valid: false },
@@ -44,7 +44,7 @@ describe('Contacts Service', function () {
 			}
 
 			angular.forEach(pagers, function (pager) {
-				waitPromiseResult(ContactsService.list(pager.index, pager.size), function (res) {
+				waitPromiseResult(Contacts.list(pager.index, pager.size), function (res) {
 					validCheck(pager.valid);
 				}, function (err) {
 					validCheck(!pager.valid);
@@ -52,11 +52,11 @@ describe('Contacts Service', function () {
 			})
 		}))
 
-		it('should order results', inject(function (ContactsService, LocalStorageService) {
+		it('should order results', inject(function (Contacts, LocalStorage) {
 			var c1 = {Name: 'Ivan', Surname: 'Petrov', Phone: '123', Group: ''};
 			var c2 = {Name: 'Andrey', Surname: 'Bunin', Phone: '2', Group: 'Friend'};
 
-			spyOn(LocalStorageService, 'get').andReturn([c1, c2]);
+			spyOn(LocalStorage, 'get').andReturn([c1, c2]);
 
 			var sortings = [
 				{sort: {Field: 'Name', Desc: true}, res: [c1, c2]},
@@ -68,7 +68,7 @@ describe('Contacts Service', function () {
 			];
 
 			angular.forEach(sortings, function (s) {
-				waitPromiseResult(ContactsService.list(0, 10, s.sort), function (res) {
+				waitPromiseResult(Contacts.list(0, 10, s.sort), function (res) {
 					expect(res.Contacts).toEqual(s.res);
 				}, function (err) {
 					expect('error').toEqual('none');
@@ -76,12 +76,12 @@ describe('Contacts Service', function () {
 			})
 		}))
 
-		it('should search by name or surname', inject(function (ContactsService, LocalStorageService) {
+		it('should search by name or surname', inject(function (Contacts, LocalStorage) {
 			var c1 = {Name: 'Ivan', Surname: 'Petrov', Phone: '123', Group: ''};
 			var c2 = {Name: 'Andrey', Surname: 'Bunin', Phone: '2', Group: 'Friend'};
 			var c3 = {Name: 'John', Surname: 'Brown', Phone: '2', Group: 'Friend'};
 
-			spyOn(LocalStorageService, 'get').andReturn([c1, c2, c3]);
+			spyOn(LocalStorage, 'get').andReturn([c1, c2, c3]);
 
 			var queries = [
 				{text: 'an', res: [c1, c2]},
@@ -90,7 +90,7 @@ describe('Contacts Service', function () {
 			];
 
 			angular.forEach(queries, function (q) {
-				waitPromiseResult(ContactsService.list(0, 10, null, q.text), function (res) {
+				waitPromiseResult(Contacts.list(0, 10, null, q.text), function (res) {
 					expect(res.Contacts).toEqual(q.res);
 				}, function (err) {
 					expect('error').toEqual('none');
@@ -100,12 +100,12 @@ describe('Contacts Service', function () {
 	})
 
 	describe('save', function () {
-		it('should exist', inject(function (ContactsService) {
-			expect(ContactsService.save).toBeDefined();
+		it('should exist', inject(function (Contacts) {
+			expect(Contacts.save).toBeDefined();
 		}))
 
-		it('should validate fields', inject(function (ContactsService, LocalStorageService) {
-			spyOn(LocalStorageService, 'put').andCallFake(function () {
+		it('should validate fields', inject(function (Contacts, LocalStorage) {
+			spyOn(LocalStorage, 'put').andCallFake(function () {
 			});
 
 			var contacts = [
@@ -128,7 +128,7 @@ describe('Contacts Service', function () {
 			}
 
 			angular.forEach(contacts, function (c) {
-				waitPromiseResult(ContactsService.save(c), function (res) {
+				waitPromiseResult(Contacts.save(c), function (res) {
 					checkValid(c.valid);
 				}, function (err) {
 					checkValid(!c.valid);
@@ -136,39 +136,39 @@ describe('Contacts Service', function () {
 			})
 		}))
 
-		it('should trim fields', inject(function (ContactsService, LocalStorageService) {
-			spyOn(LocalStorageService, 'put').andCallFake(function () {
+		it('should trim fields', inject(function (Contacts, LocalStorage) {
+			spyOn(LocalStorage, 'put').andCallFake(function () {
 			});
 
 			var c = {Name: ' Ivan ', Surname: ' Petrov ', Phone: '  12121   ', Group: ' Friend '};
-			waitPromiseResult(ContactsService.save(c), function (res) {
+			waitPromiseResult(Contacts.save(c), function (res) {
 				expect(res).toEqual({Id: 1, Name: 'Ivan', Surname: 'Petrov', Phone: '12121', Group: 'Friend'});
 			}, function (err) {
 				expect('error').toEqual('none');
 			})
 		}))
 
-		it('should save', inject(function (LocalStorageService) {
+		it('should save', inject(function (LocalStorage) {
 			var existing = {Id: 1, Name: 'Existing', Phone: '1213'};
 
 			var contacts = [existing];
-			spyOn(LocalStorageService, 'get').andCallFake(function () {
+			spyOn(LocalStorage, 'get').andCallFake(function () {
 				return angular.copy(contacts);
 			})
-			spyOn(LocalStorageService, 'put').andCallFake(function (key, value) {
+			spyOn(LocalStorage, 'put').andCallFake(function (key, value) {
 				contacts = value;
 			});
 
-			inject(function (ContactsService) {
+			inject(function (Contacts) {
 				var newContact = {Name: ' Ivan ', Surname: ' Petrov ', Phone: '  12121   ', Group: ' Friend '};
-				waitPromiseResult(ContactsService.save(newContact), function (res) {
+				waitPromiseResult(Contacts.save(newContact), function (res) {
 					expect(res.Id).toEqual(2);
 				}, function (err) {
 					expect('error').toEqual('none');
 				})
 
 				existing.Phone = '234';
-				waitPromiseResult(ContactsService.save(existing), function (res) {
+				waitPromiseResult(Contacts.save(existing), function (res) {
 					expect(res.Id).toEqual(1);
 					expect(res.Phone).toEqual('234');
 				}, function (err) {

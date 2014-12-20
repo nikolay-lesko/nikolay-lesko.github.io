@@ -1,0 +1,87 @@
+.take-entire-parent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.text-center {
+  padding-top: 20px !important;
+}
+/*---------------- Login form -------------------*/
+#loginModal .modal-footer {
+  border-top: 0px;
+}
+@media (min-width: 768px) {
+  #loginModal .modal-body .form-group {
+    height: 35px;
+  }
+  #loginModal .modal-body .form-group .control-label {
+    margin-top: 15px;
+  }
+}
+/*--------------------- Projects page ------------*/
+/*-----------------------------------------------*/
+.loading .background,
+.loading .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.loading .background {
+  z-index: 10000;
+  background: #c0c0c0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@value)";
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+}
+.loading .content {
+  z-index: 10001;
+  left: 50%;
+  top: 50%;
+}
+.loading .content img {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin-left: -21px;
+  margin-top: -21px;
+}
+/*-------------- Dialogs -------------------*/
+/* Fix for Bootstrap 3 with Angular UI Bootstrap */
+.modal {
+  display: block;
+}
+/* Custom dialog/modal headers */
+.dialog-header-error {
+  background-color: #d2322d;
+}
+.dialog-header-wait {
+  background-color: #428bca;
+}
+.dialog-header-notify {
+  background-color: #eeeeee;
+}
+.dialog-header-confirm {
+  background-color: #333333;
+}
+.dialog-header-error span,
+.dialog-header-error h4,
+.dialog-header-wait span,
+.dialog-header-wait h4,
+.dialog-header-confirm span,
+.dialog-header-confirm h4 {
+  color: #ffffff;
+}
+/* Ease Display */
+.pad {
+  padding: 25px;
+}
+.some {
+  background-image: url('img/some.jpg');
+}

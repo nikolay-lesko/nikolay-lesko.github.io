@@ -1,0 +1,72 @@
+<div ng-controller="RegisterCtrl">
+	<form name="form" novalidate>
+		<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="text-center">Register</h3>
+					</div>
+					<div class="modal-body">
+
+						<form class="form form-horizontal col-md-12 center-block">
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Email</label>
+
+								<div class="col-sm-9">
+									<input type="email" class="form-control input-lg"
+									       placeholder="Email"
+									       ng-model="User.Email"
+									       name="userEmail"
+									       validation-highlight
+									       required
+									       autocomplete="off"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Password</label>
+
+								<div class="col-sm-9">
+									<input type="password" class="form-control input-lg" placeholder="Password"
+									       ng-model="User.Password"
+									       name="password"
+									       validation-highlight
+									       required
+									       autocomplete="off"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-3">
+
+								</div>
+								<div class="col-sm-8">
+									<div ng-show="!IsLoading">
+										<button class="btn btn-primary btn-lg btn-block1" type="submit"
+										        ng-click="onRegisterClick()"
+												>
+											Register
+										</button>
+
+										<span>or</span>
+										<a href="#/login">Log In</a>
+									</div>
+								</div>
+								<div class="col-sm-1">
+									<img src="css/img/loading.gif" class="pull-right" ng-show="IsLoading"/>
+								</div>
+							</div>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-12">
+							<div class="alert alert-danger text-center" ng-show="ErrorMessage">{{ErrorMessage}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

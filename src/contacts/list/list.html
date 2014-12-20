@@ -1,0 +1,85 @@
+<div ng-controller="ContactsListCtrl">
+
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+            <div class="col-xs-7 form form-inline">
+                <label class="control-label form-group">Search:</label>
+                <input type="text" class="form-control form-group" ng-model="SearchText"/>
+                <button class="btn btn-primary form-group" ng-click="onSearchClick()">Search</button>
+            </div>
+
+            <div class="col-xs-5 ">
+                <div class="pull-right form form-inline">
+                    <label class="control-label form-group">Group by:</label>
+
+                    <select class="form-control form-group"
+                            id="groupSelect"
+                            ng-model="Grouping"
+                            ng-options="g.Name for g in AvailableGroupings">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row hidden-xs">
+        <div class="col-sm-12">&nbsp;</div>
+    </div>
+
+    <div class="row col-sm-offset-1 col-sm-10">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    <sort-field id="sortByName" for="Name" current="Sort.Field" desc="Sort.Desc">Name</sort-field>
+                </th>
+                <th>
+                    <sort-field id="sortBySurname" for="Surname" current="Sort.Field" desc="Sort.Desc">Surname
+                    </sort-field>
+                </th>
+                <th>
+                    <sort-field id="sortByPhone" for="Phone" current="Sort.Field" desc="Sort.Desc">Phone
+                    </sort-field>
+                </th>
+                <th>
+                    <sort-field id="sortByGroup" for="Group" current="Sort.Field" desc="Sort.Desc">Group
+                    </sort-field>
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat-start="g in Contacts" ng-if="g.Group != undefined">
+                <td colspan="5"><h4 class="group-header">{{g.Group}}</h4></td>
+            </tr>
+            <tr ng-repeat-end ng-repeat="c in g.Contacts">
+                <td>{{c.Name}}</td>
+                <td>{{c.Surname}}</td>
+                <td>{{c.Phone|tel}}</td>
+                <td>{{c.Group}}</td>
+                <td>
+                    <button class="btn btn-default glyphicon glyphicon-pencil"
+                            title="Edit"
+                            ng-click="onEditClick(c)"></button>
+
+                    <button class="btn btn-default glyphicon glyphicon-remove"
+                            title="Delete"
+                            ng-click="onDeleteClick(c, 'Are you sure to delete contact ' + c.Name + ' ' + c.Surname + '?');"></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-group col-sm-offset-1 col-sm-10">
+        <button class="btn btn-default" ng-click="onAddClick()">Add</button>
+        <pagination items-per-page="Pager.PageSize" page="Pager.PageIndex" total-items="Pager.TotalResults"
+                    on-select-page="onSelectPage(page)"
+                    max-size="10" rotate="true"
+                    style="vertical-align: middle">
+        </pagination>
+    </div>
+
+    <progress-indicator ng-show="IsLoading"></progress-indicator>
+
+</div>

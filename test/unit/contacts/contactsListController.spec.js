@@ -2,15 +2,15 @@ describe('Contacts List Controller', function () {
 
 	var scope;
 	var timeout;
-	var contactsService;
+	var contacts;
 	var modal;
 	var controllerService;
-	var localStorageService;
+	var localStorage;
 
 	function createController() {
 		return controllerService('ContactsListCtrl', {
 			'$scope': scope,
-			'ContactsService': contactsService,
+			'Contacts': contacts,
 			'$modal': modal
 		});
 	}
@@ -21,18 +21,18 @@ describe('Contacts List Controller', function () {
 	];
 
 	beforeEach(function () {
-		angular.mock.module('ContactsModule');
+		angular.mock.module('Contacts');
 
-		inject(function ($controller, $rootScope, ContactsService, $modal, LocalStorageService, $timeout) {
+		inject(function ($controller, $rootScope, Contacts, $modal, LocalStorage, $timeout) {
 			controllerService = $controller;
 			scope = $rootScope.$new();
-			contactsService = ContactsService;
+			contacts = Contacts;
 			timeout = $timeout;
 			modal = $modal;
-			localStorageService = LocalStorageService;
+			localStorage = LocalStorage;
 
-			spyOn(LocalStorageService, 'get').andReturn(storedContacts);
-			spyOn(LocalStorageService, 'put').andCallFake(function (key, value) {
+			spyOn(localStorage, 'get').andReturn(storedContacts);
+			spyOn(localStorage, 'put').andCallFake(function (key, value) {
 				storedContacts = value;
 			})
 		})
@@ -42,7 +42,7 @@ describe('Contacts List Controller', function () {
 		var controller = createController();
 		timeout.flush();
 
-		// by default sorting by Name so initially storedContacts are ordered by name
+		// by default sorting is by Name so initially storedContacts are ordered by name
 		expect(scope.Contacts).toEqual([
 			{Group: undefined, Contacts: storedContacts}
 		]);
@@ -51,7 +51,7 @@ describe('Contacts List Controller', function () {
 	it('should show and hide loading progress', function () {
 		var showed;
 
-		localStorageService.get.andCallFake(function () {
+		localStorage.get.andCallFake(function () {
 			showed = scope.IsLoading;
 
 			return storedContacts;
@@ -70,7 +70,7 @@ describe('Contacts List Controller', function () {
 		scope.Pager.PageIndex = 1;
 		scope.Pager.PageSize = 1;
 
-		var spy = spyOn(contactsService, 'list').andCallThrough();
+		var spy = spyOn(contacts, 'list').andCallThrough();
 		scope.onSelectPage(2);
 		timeout.flush();
 		expect(spy).toHaveBeenCalled();
@@ -84,7 +84,7 @@ describe('Contacts List Controller', function () {
 	it('should sort on Sort change', function () {
 		var controller = createController();
 
-		var spy = spyOn(contactsService, 'list').andCallThrough();
+		var spy = spyOn(contacts, 'list').andCallThrough();
 
 		scope.Sort.Field = scope.Sort.Field + '_changed';
 		scope.$digest();
@@ -99,7 +99,7 @@ describe('Contacts List Controller', function () {
 	it('should group on Grouping change', function () {
 		var controller = createController();
 
-		var spy = spyOn(contactsService, 'list').andCallThrough();
+		var spy = spyOn(contacts, 'list').andCallThrough();
 
 		var grouping = {
 			Name: 'Some group name',
@@ -119,7 +119,7 @@ describe('Contacts List Controller', function () {
 	it('should search', function () {
 		var controller = createController();
 
-		var spy = spyOn(contactsService, 'list').andCallThrough();
+		var spy = spyOn(contacts, 'list').andCallThrough();
 
 		scope.onSearchClick();
 		expect(spy).not.toHaveBeenCalled();

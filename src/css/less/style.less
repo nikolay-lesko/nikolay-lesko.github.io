@@ -1,0 +1,70 @@
+@import "variables.less";
+@import "mixins.less";
+
+body {
+}
+
+.text-center {
+  padding-top: 20px !important;
+}
+/*---------------- Login form -------------------*/
+#loginModal .modal-footer {
+  border-top: 0px;
+}
+
+@media (min-width: 768px){
+  #loginModal .modal-body .form-group {
+    height: 35px;
+  }
+
+  #loginModal .modal-body .form-group .control-label{
+    margin-top: 15px;
+  }
+}
+
+/*--------------------- Projects page ------------*/
+#projects_page {
+
+}
+
+/*-----------------------------------------------*/
+
+.loading{
+}
+
+.loading .background, .loading .content {
+  .take-entire-parent;
+}
+
+.loading .background {
+  z-index: @loading-background-z-index;
+
+  background: @loading-background-color;
+
+  .opacity(@loading-background-opacity);
+}
+
+.loading .content{
+  z-index: @loading-background-z-index + 1;
+
+  left: 50%;
+  top: 50%;
+}
+
+.loading .content img {
+  position: relative;
+  display: inline-block;
+
+  width:  @loading-image-size;
+  height: @loading-image-size;
+  margin-left:  -@loading-image-size/2;
+  margin-top:   -@loading-image-size/2;
+}
+
+
+/*-------------- Dialogs -------------------*/
+@import "dialogs.less";
+
+.some{
+background-image: url('img/some.jpg');
+}

@@ -1,7 +1,7 @@
 describe('Local Storage Service', function () {
 
 	beforeEach(function () {
-		angular.mock.module('LocalStorageModule');
+		angular.mock.module('LocalStorage');
 
 		var store = { };
 		spyOn(window.localStorage, 'setItem').andCallFake(function (key, value) {
@@ -12,11 +12,11 @@ describe('Local Storage Service', function () {
 		})
 	});
 
-	it('should exist', inject(function (LocalStorageService) {
-		expect(LocalStorageService).toBeDefined();
+	it('should exist', inject(function (LocalStorage) {
+		expect(LocalStorage).toBeDefined();
 	}));
 
-	it('should throw on empty key', inject(function (LocalStorageService) {
+	it('should throw on empty key', inject(function (LocalStorage) {
 		var values = [
 			{value: undefined, throw: true},
 			{value: null, throw: true},
@@ -31,7 +31,7 @@ describe('Local Storage Service', function () {
 		angular.forEach(['get', 'put', 'remove'], function (methodName) {
 			angular.forEach(values, function (v) {
 				var method = function () {
-					return LocalStorageService[methodName](v.value);
+					return LocalStorage[methodName](v.value);
 				};
 
 				if (v.throw)
@@ -42,15 +42,15 @@ describe('Local Storage Service', function () {
 		});
 	}));
 
-	it('should return same value', inject(function (LocalStorageService) {
-		LocalStorageService.put('object', {'name': 'user'});
-		LocalStorageService.put('string', 'some ');
-		LocalStorageService.put('bool', true);
-		LocalStorageService.put('array', [1, 2, 3]);
+	it('should return same value', inject(function (LocalStorage) {
+		LocalStorage.put('object', {'name': 'user'});
+		LocalStorage.put('string', 'some ');
+		LocalStorage.put('bool', true);
+		LocalStorage.put('array', [1, 2, 3]);
 
-		expect(LocalStorageService.get('object')).toEqual({name: 'user'});
-		expect(LocalStorageService.get('string')).toEqual('some ');
-		expect(LocalStorageService.get('bool')).toEqual(true);
-		expect(LocalStorageService.get('array')).toEqual([1, 2, 3]);
+		expect(LocalStorage.get('object')).toEqual({name: 'user'});
+		expect(LocalStorage.get('string')).toEqual('some ');
+		expect(LocalStorage.get('bool')).toEqual(true);
+		expect(LocalStorage.get('array')).toEqual([1, 2, 3]);
 	}))
 })

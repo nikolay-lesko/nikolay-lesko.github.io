@@ -4,6 +4,7 @@
     <list default="true" id="9a399253-fa76-474a-8546-cba5e760d8cd" name="Default" comment="" />
     <ignored path="AddressBook.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,27 +36,41 @@
       <command text="webdriver-manager" />
     </commandsHistory>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/test/e2e/index.spec1.js" />
-        <option value="$PROJECT_DIR$/app/js/pager.js" />
-        <option value="$PROJECT_DIR$/app/authentication/login.html" />
-        <option value="$PROJECT_DIR$/app/authentication/register.html" />
-        <option value="$PROJECT_DIR$/app/js/directives.js" />
-        <option value="$PROJECT_DIR$/test/e2e/contacts.spec_.js" />
-        <option value="$PROJECT_DIR$/test/e2e/index.spec.js" />
-        <option value="$PROJECT_DIR$/app/contacts/_module.js" />
-        <option value="$PROJECT_DIR$/app/contacts/contactsService.js" />
-        <option value="$PROJECT_DIR$/app/lib/telFilter.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/contacts/list.html" />
-        <option value="$PROJECT_DIR$/app/contacts/editContactDialog.html" />
-        <option value="$PROJECT_DIR$/test/e2e/contacts.spec.js" />
-        <option value="$PROJECT_DIR$/test/e2e/editDialog.spec.js" />
-        <option value="$PROJECT_DIR$/test/karma.conf.js" />
-      </list>
-    </option>
+  <component name="JsGruntFileManager">
+    <gruntfiles>
+      <GruntfileState>
+        <alias-tasks>
+          <alias-task value="default" />
+        </alias-tasks>
+        <multi-tasks>
+          <GruntMultiTaskState>
+            <name>concat</name>
+            <targets>
+              <target value="js" />
+              <target value="angular" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>copy</name>
+            <targets>
+              <target value="bootstrap" />
+            </targets>
+          </GruntMultiTaskState>
+          <GruntMultiTaskState>
+            <name>uglify</name>
+            <targets>
+              <target value="js" />
+              <target value="angular" />
+            </targets>
+          </GruntMultiTaskState>
+        </multi-tasks>
+        <gruntfile-path>$PROJECT_DIR$/Gruntfile.js</gruntfile-path>
+      </GruntfileState>
+    </gruntfiles>
+    <initial>false</initial>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="JsKarmaPackageDirSetting">
     <data>D:\Projects\_JS\AddressBook\node_modules\karma</data>
@@ -63,8 +78,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -80,7 +95,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -92,7 +107,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -107,119 +121,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e2e" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contacts" />
+              <option name="myItemId" value="nikolay-lesko.github.io" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="options.lastSelected" value="preferences.editor" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/node_modules/protractor/lib/cli.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editorconfig.notification" value="Applied .editorconfig settings" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript 1.5" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io\app\lib\bootstrap-3.3.1-dist" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\_JS\AddressBook\test" />
-      <recent name="D:\Projects\_JS\AddressBook" />
-      <recent name="D:\Projects\_JS\AddressBook\tests" />
-      <recent name="D:\Projects\_JS\AddressBook\app" />
-      <recent name="D:\Projects\_JS\AddressBook\contacts" />
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io\lib\angular" />
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io" />
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io\app\js\common" />
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io\app\js\store" />
+      <recent name="D:\Projects\_JS\nikolay-lesko.github.io\app\contacts\edit" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.Karma">
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:20739/AddressBook/app/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:20739/AddressBook/dist/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="contactsListController.spec.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="contactsListController.spec.js" working-dir="$PROJECT_DIR$/test/unit/contacts">
+      <RunnerSettings RunnerId="debuggableProgram" />
+      <ConfigurationWrapper RunnerId="debuggableProgram" />
+      <method />
+    </configuration>
+    <configuration default="false" name="contactsService.spec.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="contactsService.spec.js" working-dir="$PROJECT_DIR$/test/unit/contacts">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1969/AddressBook/dist/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
       <envs />
       <method />
     </configuration>
@@ -227,14 +198,27 @@
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Karma" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="$PROJECT_DIR$/test/karma.conf.js">
@@ -246,40 +230,40 @@
       <method />
     </configuration>
     <configuration default="false" name="Protractor" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="node_modules/protractor/lib/cli.js" application-parameters="test/protractor.conf.js" working-dir="$PROJECT_DIR$">
-      <browser start="false" url="" with-js-debugger="false" />
       <RunnerSettings RunnerId="NodeJS.debug" />
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.debug" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Karma.Karma" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.Protractor" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.contactsListController.spec.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.contactsService.spec.js" />
+      <item index="6" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
     </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.contactsListController.spec.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.contactsService.spec.js" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9a399253-fa76-474a-8546-cba5e760d8cd" name="Default" comment="" />
       <created>1394965493558</created>
+      <option name="number" value="Default" />
       <updated>1394965493558</updated>
     </task>
     <servers />
@@ -305,27 +289,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37381917" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2569797" sideWeight="0.57894737" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39811066" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35783783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34594595" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39783785" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42054054" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5641026" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42105263" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25922024" sideWeight="0.57894737" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42054054" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7931937" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935567" sideWeight="0.43589744" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -348,6 +334,14 @@
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -358,123 +352,412 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/unit/contacts/contactsListController.spec.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/unit/contacts/contactsListController.spec.js</url>
+          <line>23</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="16" />
+      <option name="time" value="29" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/contacts/contacts_module.js">
+    <entry file="file://$PROJECT_DIR$/test/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/ui-utils-0.1.1/ui-utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1880" column="37" selection-start="66567" selection-end="66574" vertical-scroll-proportion="0.33233082" vertical-offset="31739" max-vertical-offset="35037">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/telFilter.js">
+    <entry file="file://$PROJECT_DIR$/src/authentication/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/e2e/index.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/e2e/editDialog.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16690043" vertical-offset="0" max-vertical-offset="3281">
+          <caret line="7" column="68" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/e2e/contacts.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36605892" vertical-offset="1388" max-vertical-offset="3043">
+          <caret line="97" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/run_e2e.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bootstrap-3.3.1-dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="107746">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/bootstrap-gh-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8321678" vertical-offset="714" max-vertical-offset="48246">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/less/mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="340">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/less/dialogs.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3617021" vertical-offset="0" max-vertical-offset="846">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/confirmDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.039035592" vertical-offset="0" max-vertical-offset="871">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25548902" vertical-offset="706" max-vertical-offset="1207">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1017964" vertical-offset="0" max-vertical-offset="501">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contacts/edit/editContactDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8633754" vertical-offset="557" max-vertical-offset="1428">
+          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contacts/list/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.107922" vertical-offset="429" max-vertical-offset="1530">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/lib/bootstrap-gh-pages/ui-bootstrap-tpls-0.9.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.356623" vertical-offset="384" max-vertical-offset="1088">
+        <state vertical-scroll-proportion="-3.0" vertical-offset="2652" max-vertical-offset="61285">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/contacts/list.html">
+    <entry file="file://$PROJECT_DIR$/lib/ui-utils-0.1.1/ui-utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="37" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.43711656" vertical-offset="684" max-vertical-offset="1445">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="35037">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/contacts/contactsService.js">
+    <entry file="file://$PROJECT_DIR$/lib/angular/telFilter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="41" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.24285714" vertical-offset="1020" max-vertical-offset="2839">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/login/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20108695" vertical-offset="111" max-vertical-offset="663">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/register/registerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17028986" vertical-offset="94" max-vertical-offset="646">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/authService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.061594203" vertical-offset="0" max-vertical-offset="552">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/_auth.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contacts/edit/editContactController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8152174" vertical-offset="536" max-vertical-offset="1088">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/contacts/editContactDialog.html">
+    <entry file="file://$PROJECT_DIR$/src/contacts/list/contactsListController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="48" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.5153374" vertical-offset="344" max-vertical-offset="1428">
+        <state vertical-scroll-proportion="0.092391305" vertical-offset="0" max-vertical-offset="2363">
+          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/directives.spec.js">
+    <entry file="file://$PROJECT_DIR$/src/js/appContoller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.074334" vertical-offset="1479" max-vertical-offset="2278">
+        <state vertical-scroll-proportion="0.092391305" vertical-offset="0" max-vertical-offset="552">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/dialogsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10869565" vertical-offset="128" max-vertical-offset="680">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/underscore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.092391305" vertical-offset="0" max-vertical-offset="552">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8152174" vertical-offset="281" max-vertical-offset="833">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8152174" vertical-offset="145" max-vertical-offset="697">
+          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33180252" vertical-offset="0" max-vertical-offset="871">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/underscore-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="539">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031539887" vertical-offset="0" max-vertical-offset="346358">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5901263" vertical-offset="455" max-vertical-offset="1326">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authentication/register/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5901263" vertical-offset="438" max-vertical-offset="1309">
+          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26086956" vertical-offset="514" max-vertical-offset="1717">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+          <folding>
+            <element signature="e#137#1756#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81515497" vertical-offset="89" max-vertical-offset="986">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/run_unit.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078071184" vertical-offset="0" max-vertical-offset="871">
+          <caret line="4" column="10" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contacts/_contacts.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06692913" vertical-offset="0" max-vertical-offset="508">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/localStorageService.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.35764375" vertical-offset="255" max-vertical-offset="1054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/utils.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
+        <state vertical-scroll-proportion="0.0" vertical-offset="477" max-vertical-offset="1054">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/unit/contacts/contactsService.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="58" selection-start="4267" selection-end="4267" vertical-scroll-proportion="0.36605892" vertical-offset="2153" max-vertical-offset="3553">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1259" max-vertical-offset="3553">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/unit/contacts/contactsListController.spec.js">
+    <entry file="file://$PROJECT_DIR$/src/contacts/contactsService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="392" selection-end="392" vertical-scroll-proportion="0.36605892" vertical-offset="45" max-vertical-offset="3247">
+        <state vertical-scroll-proportion="-0.07580825" vertical-offset="1020" max-vertical-offset="3451">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/e2e/index.spec.js">
+    <entry file="file://$PROJECT_DIR$/src/js/common/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="713">
+        <state vertical-scroll-proportion="0.606466" vertical-offset="0" max-vertical-offset="897">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/localStorageService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05685619" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1371" selection-end="1371" vertical-scroll-proportion="-0.0014025245" vertical-offset="868" max-vertical-offset="1598">
+        <state vertical-scroll-proportion="0.09476031" vertical-offset="391" max-vertical-offset="1513">
+          <caret line="29" column="67" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/e2e/editDialog.spec.js">
+    <entry file="file://$PROJECT_DIR$/test/unit/utils.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="68" selection-start="257" selection-end="257" vertical-scroll-proportion="0.16690043" vertical-offset="0" max-vertical-offset="3281">
+        <state vertical-scroll-proportion="0.11371238" vertical-offset="0" max-vertical-offset="897">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/e2e/contacts.spec.js">
+    <entry file="file://$PROJECT_DIR$/test/unit/contacts/contactsListController.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="56" selection-start="3273" selection-end="3273" vertical-scroll-proportion="0.36605892" vertical-offset="1388" max-vertical-offset="3043">
+        <state vertical-scroll-proportion="1.0044593" vertical-offset="0" max-vertical-offset="3247">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/directives.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09781358" vertical-offset="0" max-vertical-offset="1479">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="e#279#1448#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.078071184" vertical-offset="0" max-vertical-offset="871">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6822742" vertical-offset="0" max-vertical-offset="897">
+          <caret line="143" column="39" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+          <folding>
+            <element signature="e#647#1631#0" expanded="false" />
+            <element signature="e#674#864#0" expanded="false" />
+            <element signature="e#1652#1814#0" expanded="false" />
+            <element signature="e#1837#2413#0" expanded="false" />
+            <element signature="e#2434#4632#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
 </project>
-

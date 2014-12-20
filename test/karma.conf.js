@@ -22,20 +22,15 @@ module.exports = function (config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'../app/lib/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js',
-			'../app/lib/angular/angular.js',
-			'../app/lib/angular/angular-cookies.js',
-			'../app/lib/angular/angular-ui-router.js',
-			'../app/lib/angular/angular-mocks.js',
-			'../app/lib/bootstrap-gh-pages/ui-bootstrap-tpls-0.9.0.js',
-			'../app/lib/ui-utils-0.1.1/ui-utils.js',
+			'../lib/jquery-1.9.1.min.js',
+			'../lib/angular/angular.js',
+			'../lib/angular/angular-cookies.js',
+			'../lib/angular/angular-ui-router.js',
+			'../lib/angular/angular-mocks.js',
+			'../lib/bootstrap-gh-pages/ui-bootstrap-tpls-0.9.0.js',
+			'../lib/ui-utils-0.1.1/ui-utils.js',
 
-			'../app/js/*.js',
-			'../app/authentication/*.js',
-			'../app/contacts/contacts_module.js',
-			'../app/contacts/contactsService.js',
-			'../app/contacts/contactsListController.js',
-			'../app/contacts/editContactController.js',
+			'../src/**/*.js',
 
 			'./unit/**/*.spec.js'
 		],

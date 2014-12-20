@@ -1,0 +1,15 @@
+.opacity(@value) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@value)";
+  filter: alpha(opacity=@value);
+  -moz-opacity: @value/100;
+  -khtml-opacity: @value/100;
+  opacity: @value/100;
+}
+
+.take-entire-parent{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -3,7 +3,7 @@ describe('Directive', function () {
 	var compile;
 
 	beforeEach(function () {
-		angular.mock.module('DirectivesModule');
+		angular.mock.module('Directives');
 
 		inject(function ($rootScope, $compile) {
 			scope = $rootScope.$new();
