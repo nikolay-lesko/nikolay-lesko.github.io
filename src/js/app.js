@@ -11,12 +11,12 @@ angular
         $stateProvider
             .state('login', {
                 url: '/login',
-                templateUrl: 'authentication/login/login.html',
+                templateUrl: 'authentication/login.html',
                 publicUrl: true
             })
             .state('register', {
                 url: '/register',
-                templateUrl: 'authentication/register/register.html',
+                templateUrl: 'authentication/register.html',
                 publicUrl: true
             })
             .state('home', {
@@ -25,7 +25,7 @@ angular
             })
             .state('home.contacts', {
                 url: '/contacts',
-                templateUrl: 'contacts/list/list.html'
+                templateUrl: 'contacts/list.html'
             });
 
         $urlRouterProvider.otherwise('/contacts');

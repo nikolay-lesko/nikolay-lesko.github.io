@@ -92,7 +92,7 @@ angular.module('Contacts')
 
             Dialogs
                 .open({
-                    templateUrl: 'contacts/edit/editContactDialog.html',
+                    templateUrl: 'contacts/editContactDialog.html',
                     controller: 'EditContactCtrl',
                     keyboard: false,
                     backdrop: 'static',

@@ -5,18 +5,21 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.initConfig({
-            dist: {
-                dir: 'dist/',
-                js: '<%= dist.dir %>js/',
-                lib: '<%= dist.dir %>lib/',
-                css: '<%= dist.dir %>css/',
-
-                banner: '/*\n\n<%= pkg.name %> <%= pkg.version %>\n\n*/\n\n\n'
-            },
-
             pkg: grunt.file.readJSON('package.json'),
+
+            conf: {
+                dir: 'dist/',
+                js: '<%= conf.dir %>js/',
+                lib: '<%= conf.dir %>lib/',
+                css: '<%= conf.dir %>css/',
+
+                appJSName: '<%= pkg.name %>',
+                appJS: '<%= conf.js %><%= conf.appJSName %>',
+                angularJS: '<%= conf.lib %>angular'
+            },
 
             concat: {
                 options: {
@@ -25,121 +28,96 @@ module.exports = function (grunt) {
                     '\n\n'
                 },
 
-                js: {
-                    src: ['src/**/**.js'],
-                    dest: '<%= dist.js %><%= pkg.name %>.js',
-                    options: {
-                        banner: '<%= dist.banner %>'
-                    }
-                },
+                prod: {
+                    files: {
+                        '<%= conf.appJS %>.min.js': ['src/**/**.js'],
 
-                angular: {
-                    src: [
-                        // angular.js should be the first
-                        'lib/angular/angular.js',
-                        // then include another libs
-                        'lib/angular/!(angular.js)*',
-                        'lib/bootstrap-gh-pages/ui-bootstrap-tpls-0.9.0.js',
-                        'lib/ui-utils-0.1.1/ui-utils.js'
-                    ],
-                    dest: '<%= dist.lib %>angular.js'
+                        '<%= conf.angularJS %>.min.js': [
+                            // angular.js should be the first
+                            'lib/angular/angular.js',
+                            // then include another libs
+                            'lib/angular/!(angular.js)*'
+                        ]
+                    }
                 }
             },
 
             less: {
-                main: {
-                    src: 'src/css/less/style.less',
-                    dest: '<%= dist.css %>style.css'
+                prod: {
+                    files: {
+                        '<%= conf.css %>style.css': 'src/css/less/style.less'
+                    }
                 }
             },
 
             uglify: {
-                js: {
-                    src: '<%= concat.js.dest %>',
-                    dest: '<%= dist.js %><%= pkg.name %>.min.js'
-                    ,
-                    options: {
-                        banner: '<%= dist.banner %>'
-                    }
-                },
-                angular: {
-                    src: '<%= concat.angular.dest %>',
-                    dest: '<%= dist.lib %>angular.min.js',
-                    options: {
-                        banner: '/*\n\nAngularJS v1.2.5\n\n*/\n'
+                prod: {
+                    files: {
+                        '<%= conf.appJS %>.min.js': '<%= conf.appJS %>.min.js',
+                        '<%= conf.angularJS %>.min.js': '<%= conf.angularJS %>.min.js'
                     }
                 }
             },
 
             copy: {
-                bootstrap: {
+                prod: {
                     files: [
                         {
-                            src: 'lib/bootstrap-3.3.1-dist/css/bootstrap.min.css',
-                            dest: '<%= dist.lib %>bootstrap/css/bootstrap.min.css'
+                            expand: true,
+                            cwd: 'lib/',
+                            src: ['**/**.min.js', '**/**.min.css', '**/**.map', '**/fonts/*.*'],
+                            dest: '<%= conf.lib %>'
                         },
+
                         {
                             expand: true,
-                            src: 'lib/bootstrap-3.3.1-dist/fonts/*.*',
-                            dest: '<%= dist.lib %>bootstrap/fonts/',
-                            flatten: true
+                            cwd: 'src/css/img',
+                            src: '**/*.*',
+                            dest: '<%= conf.css %>img/'
                         },
+
                         {
-                            src: 'lib/bootstrap-3.3.1-dist/js/bootstrap.min.js',
-                            dest: '<%= dist.lib %>bootstrap/js/bootstrap.min.js'
-                        }
+                            expand: true,
+                            cwd: 'src/',
+                            src: ['**/**.html', '!index.html'],
+                            dest: '<%= conf.dir %>'
+                        },
                     ]
                 },
 
-                jquery: {
-                    src: ['lib/jquery-1.9.1.min.js'],
-                    dest: '<%= dist.lib %>jquery.min.js'
-                },
-
-                underscore: {
-                    src: ['lib/underscore-min.js'],
-                    dest: '<%= dist.lib %>underscore-min.js'
-                },
-
-                html: {
-                    expand: true,
-                    cwd: 'src/',
-                    src: ['**/**.html', '!index.html'],
-                    dest: '<%= dist.dir %>'
-                },
-
-                html_index: {
+                index_html: {
                     src: 'src/index.html',
-                    dest: '<%= dist.dir %>index.html',
+                    dest: '<%= conf.dir %>/index.html',
                     options: {
                         process: function (content, srcpath) {
                             return grunt.template.process(content, srcpath);
                         }
                     }
-                },
-
-                img: {
-                    expand: true,
-                    cwd: 'src/css/img',
-                    src: '**/*.*',
-                    dest: '<%= dist.css %>img/'
-                },
-
-                dev: {
-                    files: [
-                        {src: '<%= concat.js.dest %>', dest: '<%= uglify.js.dest %>'},
-                        {src: '<%= concat.angular.dest %>', dest: '<%= uglify.angular.dest %>'}
-                    ]
                 }
             },
 
-            clean: [
-                '<%= dist.dir %>'
-            ]
+            clean: {
+                prod: {
+                    src: [
+                        '<%= conf.dir %>'
+                    ]
+                },
+                options: {
+                    'no-warn': true
+                }
+            },
+
+            karma: {
+                unit: {
+                    configFile: 'test/karma.conf.js'
+                }
+            }
         }
     )
 
-    grunt.registerTask('default', ['clean', 'concat', 'less', 'uglify', 'copy']);
+    grunt.registerTask('dev', ['clean', 'concat', 'less', 'copy']);
 
-    grunt.registerTask('dev', ['clean', 'concat', 'less', 'copy', 'copy:dev']);
+    grunt.registerTask('prod', ['karma', 'clean', 'concat', 'less', 'uglify', 'copy']);
+
+    grunt.registerTask('default', ['prod']);
 }
