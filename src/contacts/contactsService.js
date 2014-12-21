@@ -27,7 +27,9 @@ angular.module('Contacts')
                     if (search && search.length > 0) {
                         var searchExpr = new RegExp(Utils.escapeRegExp(search), 'i');
 
-                        var phoneSearch = search.replace(/\D/g, '');
+                        var phoneSearch = search.replace(/[\-\(\)]/g, '');
+                        if (/\D/g.test(phoneSearch))
+                            phoneSearch = '';
                         var phoneSearchExpr = phoneSearch.length ? new RegExp(Utils.escapeRegExp(phoneSearch), 'i') : null;
 
                         contacts = $filter('filter')(contacts, function (c) {

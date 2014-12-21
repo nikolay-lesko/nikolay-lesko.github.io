@@ -117,7 +117,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('dev', ['clean', 'concat', 'less', 'copy']);
 
-    grunt.registerTask('prod', ['karma', 'clean', 'concat', 'less', 'uglify', 'copy']);
+    grunt.registerTask('prod', ['clean', 'karma', 'concat', 'less', 'uglify', 'copy']);
 
     grunt.registerTask('default', ['prod']);
 }
